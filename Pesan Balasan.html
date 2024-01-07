@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan untuk Kekasih</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #e6f7ff;
+        }
+        
+        h1 {
+            color: #004080;
+        }
+        
+        p {
+            font-size: 18px;
+            color: #0066cc;
+            line-height: 1.6;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Terima Kasih, Sayanggkuu ❤️</h1>
+    <p>Pesan ini aku desain hanya dapat dibuka sekali yaa sayangg</p>
+    <button id="bukaPesan" onclick="bukaPesan()">Buka Pesan</button>
+
+    <script>
+        function bukaPesan() {
+            // Menambahkan logika untuk memeriksa apakah pesan sudah dibuka sebelumnya
+            var pesanDibuka = localStorage.getItem('pesanDibuka');
+
+            if (!pesanDibuka) {
+                // Tambahkan pesan yang ingin ditampilkan
+                alert("Terima kasih sudah membaca pesanku sebelumnya sayang..Aminnn..Semangat dan penuh bahagia sayangg yaahh..Pelukk jauh sayanggkuu..dadaaahh..");
+
+                // Menandai bahwa pesan sudah dibuka
+                localStorage.setItem('pesanDibuka', 'true');
+            } else {
+                alert("Maaf, pesan ini sudah dibuka sebelumnya.");
+            }
+        }
+    </script>
+</body>
+</html>
